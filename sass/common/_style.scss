@@ -98,18 +98,18 @@ main {
   max-width: 1300px;
   margin: 0 auto;
   //width: 100%;
-  padding: 0 15px;
+  padding: 0 11px;
 }
 
 h1 {
+  font-size: 73px;
+
+  /* line-height: 64px; */
+  line-height: 0.87671;
+
   font-weight: 900;
-  font-size: 60px;
-  /* line-height: 47px; */
-  line-height: 0.78333;
-  text-align: center;
-  span {
-    color: var(--accent-color);
-  }
+
+  color: var(--accent-color);
 }
 
 h2 {
@@ -118,8 +118,14 @@ h2 {
   line-height: 1.16279;
   text-align: center;
 
-  color: var(--second-color);
+  color: var(--main-color);
   margin-bottom: 50px;
+  span {
+    font-weight: 900;
+    &.accent {
+      color: var(--accent-color);
+    }
+  }
 }
 
 h3 {
@@ -133,12 +139,34 @@ h3 {
   text-transform: uppercase;
 }
 
-p {
+h4 {
+  font-weight: 700;
+  font-size: 34px;
+  color: #fff;
+}
+
+h5 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 21px;
   color: var(--main-color);
+}
+
+p {
+  color: var(--second-color);
   font-weight: 400;
-  font-size: 20px;
+  font-size: 19px;
   font-style: normal;
   margin-bottom: 10px;
+  span {
+    color: var(--main-color);
+    font-weight: 700;
+  }
 }
 
 @media screen and (max-width: 768px) {
