@@ -1,0 +1,32 @@
+.result {
+  padding: 100px 0 130px;
+  background: #f7f8fa;
+  &-title {
+    max-width: 920px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  &-wrapper {
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+    gap: 30px;
+  }
+  &-item {
+    padding: 40px;
+    border-radius: 20px;
+    background: #fefefe;
+    &__title {
+      font-weight: 900;
+      font-size: 84px;
+      color: var(--accent-color);
+
+      span {
+        font-weight: 700;
+        font-size: 44px;
+      }
+    }
+    &__description {
+
+    }
+  }
+}
