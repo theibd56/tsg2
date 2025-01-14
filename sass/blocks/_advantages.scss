@@ -1,0 +1,22 @@
+.advantages {
+  padding: 100px 0 121px;
+  &-title {
+    max-width: 750px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+  &-wrapper {
+    display: grid;
+    grid-template: auto / repeat(5, 1fr);
+    gap: 30px;
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &__ico {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
