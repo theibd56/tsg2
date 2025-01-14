@@ -1,10 +1,11 @@
 .footer {
   overflow: hidden;
   &-banner {
-    background: #B52C2C;
     padding: 102px 0;
 
     position: relative;
+
+    background: url(/backgrounds/footer-bg.png) center / cover no-repeat;
   }
   &-content {
     display: flex;
@@ -21,21 +22,15 @@
     }
     &__right {
       min-width: 350px;
-      position: relative;
-      z-index: 1;
-    }
-    &::before {
-      content: '';
-      display: block;
-      width: 209px;
-      height: 209px;
-      background: #fff;
-      border-radius: 50%;
-      filter: blur(200px);
-
       position: absolute;
-      top: -50px;
-      left: -50px;
+      right: -120px;
+      z-index: 1;
+      img {
+        width: 697px;
+        height: 478px;
+
+        object-fit: contain;
+      }
     }
   }
   &-title {
@@ -48,12 +43,18 @@
     }
   }
   &-text {
-    max-width: 383px;
+    max-width: 450px;
     margin-top: 40px;
+
+    font-weight: 400;
+    font-size: 19px;
     color: #fff;
+    span {
+      font-weight: 900;
+    }
   }
   &-form {
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -97,28 +98,8 @@
     }
   }
 
-  &-smoke {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    &__left {
-      position: absolute;
-      top: -70%;
-      left: 0;
-    }
-    &__right {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-    }
-  }
-
   &-bottom {
-    padding: 58px 0;
+    padding: 60px 0;
 
     position: relative;
     z-index: 10;
@@ -147,7 +128,7 @@
       font-size: 17px;
       line-height: 22px;
 
-      color: #111111;
+      color: var(--main-color);
     }
     &:hover {
       opacity: 0.7;
