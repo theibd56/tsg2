@@ -39,3 +39,22 @@ const hitSlider = new Swiper('.hit-slider .swiper', {
         clickable: true,
     },
 })
+
+const reviewSlider = new Swiper('.review-slider .swiper', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    speed: 600,
+    loop: false,
+    autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.review-slider__pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.review-navigation__next',
+        prevEl: '.review-navigation__prev',
+    },
+})
