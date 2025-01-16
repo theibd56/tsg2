@@ -1,0 +1,44 @@
+.about {
+  padding: 100px 0 110px;
+
+  &-bottom {
+    &__title {
+      font-weight: 400;
+      font-size: 29px;
+      color: #111;
+      line-height: 1.2;
+
+      margin-bottom: 30px;
+      span {
+        font-weight: 900;
+        color: var(--accent-color);
+      }
+    }
+  }
+  &-advantages {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+
+    margin-bottom: 50px;
+    &__item {
+      padding: 20px 30px;
+      background: #f7f8fa;
+      border-radius: 20px;
+
+      width: calc(25% - 15px);
+      &_num {
+        font-weight: 900;
+        font-size: 79px;
+        color: var(--second-color);
+        text-shadow: 4px 4px 0px var(--accent-color);
+      }
+    }
+  }
+  &-text {
+    display: grid;
+    grid-template: auto / repeat(2, 1fr);
+    gap: 20px;
+  }
+}
