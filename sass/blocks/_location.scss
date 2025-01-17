@@ -1,0 +1,169 @@
+.location {
+  padding: 100px 0 130px;
+  &-title {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  &-content {
+    margin-top: -70px;
+  }
+  &-map {
+    position: relative;
+    &__point {
+      position: absolute;
+      &_circle {
+        width: 10px;
+        height: 10px;
+
+        background: var(--accent-color);
+        border-radius: 50%;
+
+        position: relative;
+        z-index: 6;
+
+        cursor: pointer;
+      }
+      &_name {
+        font-weight: 500;
+        font-size: 33px;
+
+        /* line-height: 50px; */
+        line-height: 1.21515;
+        text-align: center;
+        color: var(--main-color);
+
+        white-space: nowrap;
+
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+
+        box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.15);
+
+        position: absolute;
+        z-index: 7;
+        left: -5px;
+        bottom: -5px;
+
+        transition: all 0.3s ease;
+
+        opacity: 0;
+        visibility: hidden;
+        &::before {
+          content: "";
+          display: block;
+          width: 10px;
+          height: 10px;
+
+          background: var(--accent-color);
+          border-radius: 50%;
+
+          position: absolute;
+          left: 5px;
+          bottom: 5px;
+          z-index: 8;
+
+          cursor: pointer;
+        }
+      }
+
+      &:hover {
+        .location-map__point_name {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+  &-city {
+    margin-top: 40px;
+
+    display: grid;
+    grid-template: auto / repeat(4, 1fr);
+    gap: 10px;
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    &__ico {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__title {
+      color: var(--second-color);
+      margin: 0;
+    }
+
+  }
+}
+
+#location-point {
+  &-1 {
+    top: 59%;
+    left: 12%;
+  }
+  &-2 {
+    top: 64%;
+    left: 16%;
+  }
+  &-3 {
+    top: 76%;
+    left: 15%;
+  }
+  &-4 {
+    top: 74.5%;
+    left: 18.3%;
+  }
+  &-5 {
+    top: 77%;
+    left: 27%;
+  }
+  &-6 {
+    top: 76%;
+    left: 32%;
+  }
+  &-7 {
+    top: 82%;
+    left: 36%;
+  }
+  &-8 {
+    top: 80%;
+    left: 45%;
+  }
+  &-9 {
+    top: 85%;
+    left: 43.5%;
+  }
+  &-10 {
+    top: 84.4%;
+    left: 46%;
+  }
+  &-11 {
+    top: 89.3%;
+    left: 44.3%;
+  }
+  &-12 {
+    top: 91%;
+    left: 45%;
+  }
+  &-13 {
+    top: 89.3%;
+    left: 49.5%;
+  }
+  &-14 {
+    top: 84.8%;
+    right: 47.5%;
+  }
+  &-15 {
+    top: 87.8%;
+    right: 39%;
+  }
+  &-16 {
+    top: 89.8%;
+    right: 36%;
+  }
+}
