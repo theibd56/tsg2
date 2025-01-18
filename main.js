@@ -57,6 +57,24 @@ const reviewSlider = new Swiper('.review-slider .swiper', {
         nextEl: '.review-navigation__next',
         prevEl: '.review-navigation__prev',
     },
+    breakpoints: {
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+        992: {
+            slidesPerView: 2.4,
+            spaceBetween: 30,
+        },
+        768: {
+            slidesPerView: 1.8,
+            spaceBetween: 20,
+        },
+        320: {
+            slidesPerView: 1.2,
+            spaceBetween: 10,
+        }
+    }
 })
 
 document.addEventListener('DOMContentLoaded', () => {
