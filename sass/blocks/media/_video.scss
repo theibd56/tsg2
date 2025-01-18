@@ -1,0 +1,24 @@
+@media screen and (max-width:992px) {
+  .video {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .video {
+    height: 540px;
+  }
+  .video-link {
+    width: 80px;
+    height: 80px;
+    &::before {
+      transform: translate(-50%, -50%) scale(0.45);
+    }
+  }
+  .video-content {
+    gap: 10px;
+  }
+  .video-title {
+    font-size: 18px;
+  }
+}
