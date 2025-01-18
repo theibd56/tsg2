@@ -58,3 +58,36 @@ const reviewSlider = new Swiper('.review-slider .swiper', {
         prevEl: '.review-navigation__prev',
     },
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+    function padZero(num) {
+        return num < 10 ? '0' + num : num;
+    }
+
+    const targetDate = new Date("2025-02-31T00:00:00").getTime();
+
+    function updateTimer() {
+        const now = new Date().getTime();
+        const remainingTime = targetDate - now;
+
+        if (remainingTime <= 0) {
+            document.getElementById("days-value").innerHTML = "00";
+            document.getElementById("hours-value").innerHTML = "00";
+            document.getElementById("minutes-value").innerHTML = "00";
+            clearInterval(interval);
+            return;
+        }
+
+        const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+
+        document.getElementById("days-value").innerHTML = padZero(days);
+        document.getElementById("hours-value").innerHTML = padZero(hours);
+        document.getElementById("minutes-value").innerHTML = padZero(minutes);
+    }
+
+    const interval = setInterval(updateTimer, 1000);
+
+    updateTimer();
+});
