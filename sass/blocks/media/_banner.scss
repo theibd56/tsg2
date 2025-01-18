@@ -1,0 +1,46 @@
+@media screen and (max-width:768px) {
+  .banner {
+    padding: 30px 0 36px;
+  }
+  .banner-title {
+    text-align: center;
+    font-size: 38px;
+  }
+  .banner-text {
+    text-align: center;
+  }
+  .banner-content {
+    flex-direction: column;
+  }
+  .banner-right {
+    max-width: 100%
+  }
+  .banner-form__fields {
+    margin-bottom: 10px;
+    input {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .banner-title {
+    font-size: 20px;
+    line-height: 26px; /* 130% */
+    margin-bottom: 10px;
+  }
+  .banner-text {
+    font-size: 14px;
+  }
+  .banner-form__fields {
+    margin-bottom: 10px;
+    input {
+      height: 44px;
+      font-size: 14px;
+    }
+  }
+  .banner-form__button {
+    height: 44px;
+    font-size: 15px;
+  }
+}
