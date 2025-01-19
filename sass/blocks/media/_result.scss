@@ -1,0 +1,45 @@
+@media screen and (max-width:1200px) {
+  .result-wrapper {
+    gap: 20px;
+  }
+  .result-item {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width:992px) {
+  .result {
+    padding: 30px 0 40px;
+    &-wrapper {
+      grid-template: auto / 1fr;
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .result {
+    &-wrapper {
+      gap: 10px;
+    }
+    &-item {
+      border-radius: 10px;
+      padding: 10px 20px;
+      &__title {
+        font-size: 40px;
+        line-height: normal;
+        span {
+          margin-left: 10px;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:576px) {
+  .result {
+    &-title {
+      margin-bottom: 30px;
+    }
+  }
+}
