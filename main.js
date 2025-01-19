@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById("minutes-value").innerHTML = padZero(minutes);
     }
 
-    const interval = setInterval(updateTimer, 1000);
+    const interval = setInterval(updateTimer, 60000);
 
     updateTimer();
 });
