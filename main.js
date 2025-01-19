@@ -109,3 +109,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateTimer();
 });
+
+let productsSlider;
+
+function initSlider() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth < 992 && !productsSlider) {
+        // Инициализация слайдера
+        productsSlider = new Swiper('.products-slider .swiper', {
+            slidesPerView: 2.2,
+            spaceBetween: 10,
+            speed: 600,
+            loop: false,
+            pagination: {
+                el: '.products-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 10,
+                },
+                576: {
+                    slidesPerView: 1.6,
+                    spaceBetween: 10,
+                },
+                320: {
+                    slidesPerView: 1.1,
+                    spaceBetween: 10,
+                }
+            }
+        });
+    } else if (screenWidth >= 992 && productsSlider) {
+        // Уничтожаем слайдер и возвращаем сетку
+        productsSlider.destroy(true, true);
+        productsSlider = null;
+    }
+}
+
+// Инициализация при загрузке
+initSlider();
+
+// Обработчик изменения размера окна
+window.addEventListener('resize', initSlider);
