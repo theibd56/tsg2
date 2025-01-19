@@ -1,8 +1,12 @@
 .location {
   padding: 100px 0 130px;
+  overflow: hidden;
   &-title {
     max-width: 750px;
     margin: 0 auto;
+
+    position: relative;
+    z-index: 5;
   }
   &-content {
     margin-top: -70px;
@@ -143,7 +147,7 @@
     left: 46%;
   }
   &-11 {
-    top: 89.3%;
+    top: 88.5%;
     left: 44.3%;
   }
   &-12 {
