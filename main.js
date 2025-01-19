@@ -38,6 +38,24 @@ const hitSlider = new Swiper('.hit-slider .swiper', {
         el: '.hit-slider__pagination',
         clickable: true,
     },
+    breakpoints: {
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+        768: {
+            slidesPerView: 2.2,
+            spaceBetween: 15,
+        },
+        576: {
+            slidesPerView: 1.6,
+            spaceBetween: 10,
+        },
+        320: {
+            slidesPerView: 1.2,
+            spaceBetween: 10,
+        },
+    }
 })
 
 const reviewSlider = new Swiper('.review-slider .swiper', {
